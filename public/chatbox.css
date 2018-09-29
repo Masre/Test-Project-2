@@ -1,0 +1,41 @@
+#chatbox {
+	float: right;
+	border: 2px solid black;
+	width: 500px;
+	height: 500px;
+	display: inline-block;
+}
+
+#messages {
+	width: 500px;
+	height: 400px;
+	overflow-y: scroll;
+}
+
+#textfield {
+	box-sizing: border-box;
+	width: 450px;
+	height: 100px;
+	resize: none;
+}
+
+#sendbutton {
+	width: 50px;
+	height: 100px;
+	vertical-align: top;
+}
+
+.message {
+	padding: 3px;
+	font-family: monospace;
+	word-wrap: break-word;
+}
+
+#chatbox #textfield {
+	font-family: monospace;
+	word-wrap: break-word;	
+}
+
+#messages span.username {
+	font-weight: bold;
+}

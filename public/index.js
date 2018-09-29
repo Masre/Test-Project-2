@@ -1,4 +1,4 @@
-var socket = io.connect('http://nodejs-mongo-persistent-test-project-2-uniek.a3c1.starter-us-west-1.openshiftapps.com:8080')
+var socket = io.connect('http://nodejs-mongo-persistent-test-project-2-uniek.a3c1.starter-us-west-1.openshiftapps.com:8000')
 
 setcolor(Math.floor(Math.random()*360));
 

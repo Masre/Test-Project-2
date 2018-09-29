@@ -1,4 +1,4 @@
-var socket = io.connect('http://192.168.1.100:2500')
+var socket = io.connect('0.0.0.0:2500')
 
 setcolor(Math.floor(Math.random()*360));
 

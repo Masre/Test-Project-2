@@ -2,12 +2,13 @@
 var express  = require('express');
 var app = express();
 var server = app.listen(8080);
+var serverio = app.listen(8000);
 
 app.use(express.static('public'));
 
 var socket = require('socket.io');
 
-var io = socket(server);
+var io = socket(serverio);
 
 console.log("Server is running");
 

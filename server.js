@@ -1,14 +1,27 @@
 
 var express  = require('express');
 var app = express();
-var server = app.listen(8080);
-var serverio = app.listen(8000);
+//var server = app.listen(8080);
+//var serverio = app.listen(8000);
 
 app.use(express.static('public'));
 
-var socket = require('socket.io');
+//var socket = require('socket.io');
 
-var io = socket(serverio);
+//var io = socket(serverio);
+
+
+var http = require('http').Server(app);
+var io = require('socket.io').listen(http);
+
+var port = process.env.PORT || process.env.OPENSHIFT_NODEJS_PORT || 8080;
+var ip_address = process.env.IP   || process.env.OPENSHIFT_NODEJS_IP || '0.0.0.0';
+
+http.listen(port, ip_address, function(){
+  console.log( "Listening on " + ip_address + ", port " + port );
+});
+
+
 
 console.log("Server is running");
 
